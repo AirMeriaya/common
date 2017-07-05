@@ -148,7 +148,7 @@ public class Executor {
 			Map<String, Object> objMap = new HashMap<String, Object>();
 			objMap.put("table", table);
 			objMap.put("package", packageName + Constants.PKG_SUFFIX_MAP);
-			objMap.put("className", table.getClassName() + "DAO.java");
+			objMap.put("className", table.getClassName() + "DAO");
 			objMap.put("importPackage", packageName + table.getClassName());
 			template.process(objMap, fw);
 			System.out.println("DAO for table [" + table.getTableName() + "] complete.");
