@@ -1,9 +1,9 @@
-package com.aireme.common.db;
+package com.airme.common.db;
 
 import java.io.FileInputStream;
 import java.util.Properties;
 
-import com.aireme.common.db.constants.Constants;
+import com.airme.common.db.constants.Constants;
 
 public class Main {
 	public static void main(String[] args) {

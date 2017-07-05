@@ -1,4 +1,4 @@
-package com.aireme.common.db;
+package com.airme.common.db;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -12,12 +12,12 @@ import java.util.Map;
 import java.util.Set;
 import java.util.regex.Pattern;
 
-import com.aireme.common.db.constants.Constants;
-import com.aireme.common.db.convertor.BaseConvertor;
-import com.aireme.common.db.convertor.impl.MySQLConvertor;
-import com.aireme.common.db.data.Column;
-import com.aireme.common.db.data.Table;
-import com.aireme.common.db.util.DBConvertorUtil;
+import com.airme.common.db.constants.Constants;
+import com.airme.common.db.convertor.BaseConvertor;
+import com.airme.common.db.convertor.impl.MySQLConvertor;
+import com.airme.common.db.data.Column;
+import com.airme.common.db.data.Table;
+import com.airme.common.db.util.DBConvertorUtil;
 
 import freemarker.template.Configuration;
 import freemarker.template.Template;

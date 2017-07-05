@@ -1,4 +1,4 @@
-package com.aireme.common.db.util;
+package com.airme.common.db.util;
 
 import java.util.HashMap;
 import java.util.List;

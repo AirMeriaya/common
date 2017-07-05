@@ -1,11 +1,11 @@
-package com.aireme.common.db.convertor.impl;
+package com.airme.common.db.convertor.impl;
 
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import com.aireme.common.db.convertor.BaseConvertor;
+import com.airme.common.db.convertor.BaseConvertor;
 
 public class MySQLConvertor extends BaseConvertor {
 

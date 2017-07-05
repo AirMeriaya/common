@@ -1,4 +1,4 @@
-package com.aireme.common.db.data;
+package com.airme.common.db.data;
 
 public class Column {
 	private String columnName;

@@ -1,4 +1,4 @@
-package com.aireme.common.db.constants;
+package com.airme.common.db.constants;
 
 public class Constants {
 	// Configuration Key

@@ -1,4 +1,4 @@
-package com.aireme.common.db.convertor;
+package com.airme.common.db.convertor;
 
 public interface NameConvertor {
 	String convertTableName(String tableName);

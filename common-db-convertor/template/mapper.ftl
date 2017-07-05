@@ -3,7 +3,7 @@
 
 <mapper namespace="${namespace}>
   
-    <resultMap id="${table['className']?uncap_first}Map" type="${table['className']}">
+    <resultMap id="${table['className']?uncap_first}Map" type="${table['className']?uncap_first}">
     	<id column="${table['primaryKey']['columnName']}" property="${table['primaryKey']['fieldName']}"/>
     	<#list table['columns'] as cList>
     		<#if cList['columnName'] != table['primaryKey']['columnName']>
@@ -12,8 +12,8 @@
 		</#list>
     </resultMap>
     
-    <insert id="insert" parameterType="${table['className']}">
-  		INSERT INTO student_user (
+    <insert id="insert" parameterType="${table['className']?uncap_first}">
+  		INSERT INTO ${table['tableName']} (
 		<#list table['columns'] as cList>
   			<#if cList_has_next>
   			${cList['columnName']}, 
@@ -34,7 +34,7 @@
   	</insert>
   	
   	<insert id="insertBatch" parameterType="java.util.List">
-  		INSERT INTO student_user (
+  		INSERT INTO ${table['tableName']} (
 		<#list table['columns'] as cList>
   			<#if cList_has_next>
   			${cList['columnName']}, 
@@ -57,7 +57,7 @@
     	</foreach>
   	</insert>
   
-  	<select id="selectByKey" parameterType="java.lang.String" resultType="${table['className']}">
+  	<select id="selectByKey" parameterType="java.lang.String" resultType="${table['className']?uncap_first}">
   		SELECT
   		<#list table['columns'] as cList>
   			<#if cList_has_next>
@@ -72,7 +72,7 @@
 			${table['primaryKey']['columnName']} = ${r'#{id}'}
   	</select>
   	
-  	<select id="selectByCondition" parameterType="${table['className']}" resultMap="${table['className']}Map">
+  	<select id="selectByCondition" parameterType="${table['className']?uncap_first}" resultMap="${table['className']?uncap_first}Map">
   		SELECT
   		<#list table['columns'] as cList>
   			<#if cList_has_next>
@@ -99,7 +99,7 @@
     	</where>  
   	</select>
   	
-  	<select id="selectAll" resultMap="${table['className']}Map">
+  	<select id="selectAll" resultMap="${table['className']?uncap_first}Map">
   		SELECT
   		<#list table['columns'] as cList>
   			<#if cList_has_next>
@@ -112,7 +112,7 @@
 			${table['tableName']}
   	</select>
   	
-  	<update id="updateByKey" parameterType="${table['className']}">
+  	<update id="updateByKey" parameterType="${table['className']?uncap_first}">
   		UPDATE ${table['tableName']} 
   		<set>
   		<#list table['columns'] as cList>

@@ -1,4 +1,4 @@
-package com.aireme.common.db.convertor;
+package com.airme.common.db.convertor;
 
 import java.math.BigDecimal;
 import java.sql.Connection;
@@ -9,10 +9,10 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import com.aireme.common.db.constants.Constants;
-import com.aireme.common.db.data.Column;
-import com.aireme.common.db.data.Table;
-import com.aireme.common.db.util.DBConvertorUtil;
+import com.airme.common.db.constants.Constants;
+import com.airme.common.db.data.Column;
+import com.airme.common.db.data.Table;
+import com.airme.common.db.util.DBConvertorUtil;
 
 public abstract class BaseConvertor implements Convertor {
 	private DatabaseMetaData metadata;
