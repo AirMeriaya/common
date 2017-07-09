@@ -10,7 +10,7 @@ public interface ${className} {
 	
 	public void insertBatch(List<${table['className']}> records);
 	
-	public ${table['className']} selectByKey(String key);
+	public ${table['className']} selectByKey(int key);
 	
 	public List<${table['className']}> selectByCondition(${table['className']} condition);
 	
@@ -20,7 +20,7 @@ public interface ${className} {
 	
 	public void updateBatch(List<${table['className']}> records);
 	
-	public void deleteByKey(String key);
+	public void deleteByKey(int key);
 	
 	public void deleteBatch(List<${table['className']}> records);
 }
