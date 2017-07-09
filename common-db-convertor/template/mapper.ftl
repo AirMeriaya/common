@@ -57,7 +57,7 @@
     	</foreach>
   	</insert>
   
-  	<select id="selectByKey" parameterType="java.lang.String" resultType="${table['className']?uncap_first}">
+  	<select id="selectByKey" parameterType="java.lang.Integer" resultType="${table['className']?uncap_first}">
   		SELECT
   		<#list table['columns'] as cList>
   			<#if cList_has_next>
@@ -112,7 +112,7 @@
 			${table['tableName']}
   	</select>
   	
-  	<update id="updateByKey" parameterType="${table['className']?uncap_first}">
+  	<update id="updateByKey" parameterType="java.lang.Integer">
   		UPDATE ${table['tableName']} 
   		<set>
   		<#list table['columns'] as cList>
@@ -152,7 +152,7 @@
   		</foreach>
 	</update>
   	
-  	<delete id="deleteByKey" parameterType="java.lang.String">
+  	<delete id="deleteByKey" parameterType="java.lang.Integer">
   		DELETE FROM ${table['tableName']} 
   		WHERE
   			${table['primaryKey']['columnName']} = ${r'#{id}'}

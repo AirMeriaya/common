@@ -16,7 +16,7 @@ public interface ${className} {
 	
 	public List<${table['className']}> selectAll();
 	
-	public void updateByKey(${table['className']} record);
+	public void updateByKey(int key);
 	
 	public void updateBatch(List<${table['className']}> records);
 	
