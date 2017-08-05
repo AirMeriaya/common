@@ -1,4 +1,4 @@
-package ${package}.dao.mapper;
+package ${package};
 
 import java.util.List;
 

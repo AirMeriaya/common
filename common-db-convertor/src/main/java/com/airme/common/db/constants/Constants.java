@@ -12,7 +12,7 @@ public class Constants {
 	public static final String PKG_DATE = "java.util.Date";
 	public static final String PKG_DECIMAL = "java.math.BigDecimal";
 	public static final String PKG_SUFFIX_MODEL = ".dao.model";
-	public static final String PKG_SUFFIX_MAP = ".dao.map";
+	public static final String PKG_SUFFIX_MAP = ".dao";
 	public static final String PKG_SUFFIX_MAPPER = ".dao.mapper";
 
 	// Database Field Type

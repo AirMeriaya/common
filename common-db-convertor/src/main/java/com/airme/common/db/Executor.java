@@ -149,7 +149,7 @@ public class Executor {
 			objMap.put("table", table);
 			objMap.put("package", packageName + Constants.PKG_SUFFIX_MAP);
 			objMap.put("className", table.getClassName() + "DAO");
-			objMap.put("importPackage", packageName + table.getClassName());
+			objMap.put("importPackage", packageName + Constants.PKG_SUFFIX_MODEL + "." + table.getClassName());
 			template.process(objMap, fw);
 			System.out.println("DAO for table [" + table.getTableName() + "] complete.");
 		} catch (Exception e) {
