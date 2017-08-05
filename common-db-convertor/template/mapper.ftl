@@ -112,7 +112,7 @@
 			${table['tableName']}
   	</select>
   	
-  	<update id="updateByKey" parameterType="java.lang.Integer">
+  	<update id="updateByKey" parameterType="${table['className']?uncap_first}">
   		UPDATE ${table['tableName']} 
   		<set>
   		<#list table['columns'] as cList>
