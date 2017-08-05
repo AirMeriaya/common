@@ -57,13 +57,13 @@
     	</foreach>
   	</insert>
   
-  	<select id="selectByKey" parameterType="java.lang.Integer" resultType="${table['className']?uncap_first}">
+  	<select id="selectByKey" parameterType="java.lang.Integer" resultMap="${table['className']?uncap_first}Map">
   		SELECT
   		<#list table['columns'] as cList>
   			<#if cList_has_next>
-  			${cList['columnName']} as ${cList['fieldName']}, 
+  			${cList['columnName']}, 
   		<#else>
-  			${cList['columnName']} as ${cList['fieldName']}
+  			${cList['columnName']}
   			</#if>
 		</#list>
 		FROM 
@@ -76,9 +76,9 @@
   		SELECT
   		<#list table['columns'] as cList>
   			<#if cList_has_next>
-  			${cList['columnName']} as ${cList['fieldName']}, 
+  			${cList['columnName']}, 
   		<#else>
-  			${cList['columnName']} as ${cList['fieldName']}
+  			${cList['columnName']}
   			</#if>
 		</#list>
 		FROM 
@@ -103,9 +103,9 @@
   		SELECT
   		<#list table['columns'] as cList>
   			<#if cList_has_next>
-  			${cList['columnName']} as ${cList['fieldName']}, 
+  			${cList['columnName']}, 
   			<#else>
-  			${cList['columnName']} as ${cList['fieldName']}
+  			${cList['columnName']}
   			</#if>
 		</#list>
 		FROM 

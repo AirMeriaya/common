@@ -165,7 +165,7 @@ public class Executor {
 			Template template = templateConfig.getTemplate(Constants.TEMPLATE_MAPPER);
 			String fileName = new StringBuilder(destination).append(packagePath)
 					.append(DBConvertorUtil.package2Path(Constants.PKG_SUFFIX_MAPPER))
-					.append(table.getTableName()).append(".xml").toString();
+					.append(table.getTableName()).append("_mapper").append(".xml").toString();
 			FileWriter fw = new FileWriter(fileName);
 			Map<String, Object> objMap = new HashMap<String, Object>();
 			objMap.put("table", table);
